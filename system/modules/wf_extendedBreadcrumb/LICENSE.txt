@@ -1,0 +1,15 @@
+/**
+ * Package    	wf_extendedBreadcrumb Extension
+ * Copyright  	MEN AT WORK 2011
+ * Author		Andreas Isaak <cms@men-at-work.de>, David Maack <cms@men-at-work.de>, Stefan Heimes <cms@men-at-work.de>
+ * Link			http://www.men-at-work.de/
+ * License    	GNU/LGPL
+ */
+ 
+/**
+ * Package    	wf_extendedBreadcrumb Extension
+ * Copyright  	Wireframe 2010
+ * Author		Andi Platen <info@wireframe.de>
+ * Link			http://www.wireframe.de/
+ * License    	GNU/LGPL
+ */
