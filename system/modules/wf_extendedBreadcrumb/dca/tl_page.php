@@ -33,6 +33,7 @@
 
 foreach($GLOBALS['TL_DCA']['tl_page']['palettes'] as $key=>$row)
 {
+    if($key == '__selector__') continue;
 	if(!stristr($row,'hide,')) continue;
 	$GLOBALS['TL_DCA']['tl_page']['palettes'][$key] = str_replace('hide,','hide,wf_extendedBreadcrumb,',$GLOBALS['TL_DCA']['tl_page']['palettes'][$key]);
 }
