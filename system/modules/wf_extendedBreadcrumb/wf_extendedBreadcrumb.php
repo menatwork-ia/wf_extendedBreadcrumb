@@ -69,6 +69,8 @@ class wf_extendedBreadcrumb extends Module
      */
     protected function compile()
     {
+        mb_internal_encoding("UTF-8");
+        
         global $objPage;
 
         //variables
@@ -145,7 +147,7 @@ class wf_extendedBreadcrumb extends Module
                 //Cut PageTitle
                 if (strlen($arrPages[$i]['pageTitle']) > $intMaxLength)
                 {
-                    $strTitle = substr($arrPages[$i]['pageTitle'], 0, $intCutLength) . $strPlaceholder;
+                    $strTitle = mb_substr($arrPages[$i]['pageTitle'], 0, $intCutLength) . $strPlaceholder;
                 }
                 else
                 {
@@ -160,7 +162,7 @@ class wf_extendedBreadcrumb extends Module
                 //Cut Title
                 if (strlen($arrPages[$i]['title']) > $intMaxLength)
                 {
-                    $strTitle = substr($arrPages[$i]['title'], 0, $intCutLength) . $strPlaceholder;
+                    $strTitle = mb_substr($arrPages[$i]['title'], 0, $intCutLength) . $strPlaceholder;
                 }
                 else
                 {
@@ -198,7 +200,7 @@ class wf_extendedBreadcrumb extends Module
             //Cut PageTitle
             if (strlen($arrPages[$i]['pageTitle']) > $intMaxLength)
             {
-                $strTitle = substr($arrPages[$i]['pageTitle'], 0, $intCutLength) . $strPlaceholder;
+                $strTitle = mb_substr($arrPages[$i]['pageTitle'], 0, $intCutLength) . $strPlaceholder;
             }
             else
             {
@@ -213,7 +215,7 @@ class wf_extendedBreadcrumb extends Module
             //Cut Title
             if (strlen($arrPages[$i]['title']) > $intMaxLength)
             {
-                $strTitle = substr($arrPages[$i]['title'], 0, $intCutLength) . $strPlaceholder;
+                $strTitle = mb_substr($arrPages[$i]['title'], 0, $intCutLength) . $strPlaceholder;
             }
             else
             {
@@ -269,7 +271,7 @@ class wf_extendedBreadcrumb extends Module
             //Cut article title
             if (strlen($objArticle->title) > $intMaxLength)
             {
-                $strTitle = substr($objArticle->title, 0, $intCutLength) . $strPlaceholder;
+                $strTitle = mb_substr($objArticle->title, 0, $intCutLength) . $strPlaceholder;
             }
             else
             {
@@ -311,7 +313,7 @@ class wf_extendedBreadcrumb extends Module
                 //Cut news title
                 if (strlen($strCurrentPageTitle) > $intMaxLength)
                 {
-                    $strTitle = substr($strCurrentPageTitle, 0, $intCutLength) . $strPlaceholder;
+                    $strTitle = mb_substr($strCurrentPageTitle, 0, $intCutLength) . $strPlaceholder;
                 }
                 else
                 {
@@ -329,7 +331,7 @@ class wf_extendedBreadcrumb extends Module
                 //Cut news title
                 if (strlen($objItems->headline) > $intMaxLength)
                 {
-                    $strTitle = substr($objItems->headline, 0, $intCutLength) . $strPlaceholder;
+                    $strTitle = mb_substr($objItems->headline, 0, $intCutLength) . $strPlaceholder;
                 }
                 else
                 {
@@ -375,7 +377,7 @@ class wf_extendedBreadcrumb extends Module
                 //Cut news title
                 if (strlen($strCurrentPageTitle) > $intMaxLength)
                 {
-                    $strTitle = substr($strCurrentPageTitle, 0, $intCutLength) . $strPlaceholder;
+                    $strTitle = mb_substr($strCurrentPageTitle, 0, $intCutLength) . $strPlaceholder;
                 }
                 else
                 {
@@ -394,7 +396,7 @@ class wf_extendedBreadcrumb extends Module
                 //Cut event title
                 if (strlen($objEvent->title) > $intMaxLength)
                 {
-                    $strTitle = substr($objEvent->title, 0, $intCutLength) . $strPlaceholder;
+                    $strTitle = mb_substr($objEvent->title, 0, $intCutLength) . $strPlaceholder;
                 }
                 else
                 {
