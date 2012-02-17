@@ -79,13 +79,20 @@ class wf_extendedBreadcrumb extends Module
         $intPageID = $objPage->id;
 
         //init core variables from database
-        $intCutLength = $this->wf_extendedBreadcrumb_cutlength;
+        $intCutLength   = $this->wf_extendedBreadcrumb_cutlength;
         $strPlaceholder = $this->wf_extendedBreadcrumb_placeholder;
-        $intMaxLength = $intCutLength + strlen($strPlaceholder);
-        $strRootPage = $this->wf_extendedBreadcrumb_rootpage;
-        $arrKeywords = trimsplit(",", $this->wf_extendedBreadcrumb_keywords);
-        $strCurrentPageTitle = $this->replaceInsertTags('{{env::page_title}}');
-       
+        $intMaxLength   = $intCutLength + strlen($strPlaceholder);
+        $strRootPage    = $this->wf_extendedBreadcrumb_rootpage;
+        $arrKeywords    = trimsplit(",", $this->wf_extendedBreadcrumb_keywords);
+        if (version_compare(VERSION, "2.11", ">="))
+        {
+            $strCurrentPageTitle = $this->replaceInsertTags('{{page::pageTitle}}');
+        }
+        else
+        {
+            $strCurrentPageTitle = $this->replaceInsertTags('{{env::page_title}}');
+        }
+        
         //declare template variables
         $this->Template->delimiter = $this->wf_extendedBreadcrumb_delimiter;
 
