@@ -39,6 +39,8 @@ $GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_defineRoot'] = array('Ei
 $GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_placeholder'] = array('Platzhalter', 'Hier können Sie den Platzhalter eingeben der nach der maximalen Zeichenlänge eingeblendet wird.');
 $GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_keywords'] = array('Schlagwörter', 'Hier können Sie komma getrennt Schlagwörter eingeben die dann beim auftreten im Navigationspfad mithilfe einer CSS-Klasse hervorgehoben werden.');
 $GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_onlytitle'] = array('Seitentitel ignorieren', 'Optionalen Seitentitel ignorieren und den Seitennamen verwenden.');
+$GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_hideOnFirstLevel'] = array('Auf erster Ebene ausblenden','Wenn nur eine Ebene verfügbar ist und damit das Breadcrumb keinen Sinn erfüllt, wird es ausgeblendet');
+
 
 /**
  * Legends

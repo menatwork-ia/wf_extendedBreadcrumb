@@ -97,9 +97,17 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['wf_extendedBreadcrumb_onlytitle'] = a
 	'search'        		=> false
 );
 
+$GLOBALS['TL_DCA']['tl_module']['fields']['wf_extendedBreadcrumb_hideOnFirstLevel'] = array
+(
+	'label'         		=> &$GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_hideOnFirstLevel'],
+	'inputType'     		=> 'checkbox',
+	'exclude'       		=> true,
+	'search'        		=> false
+);
+
 
 // add palettes to tl_module
-$GLOBALS['TL_DCA']['tl_module']['palettes']['wf_extendedBreadcrumb'] = '{title_legend},name,headline,type;{wf_extendedBreadcrumb_config},wf_extendedBreadcrumb_delimiter,wf_extendedBreadcrumb_cutlength,wf_extendedBreadcrumb_placeholder,wf_extendedBreadcrumb_keywords,wf_extendedBreadcrumb_hidden,wf_extendedBreadcrumb_onlytitle;{wf_extendedBreadcrumb_startpage},wf_extendedBreadcrumb_defineRoot;{protected_legend},protected;{expert_legend},align,space,cssID';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['wf_extendedBreadcrumb'] = '{title_legend},name,headline,type;{wf_extendedBreadcrumb_config},wf_extendedBreadcrumb_delimiter,wf_extendedBreadcrumb_cutlength,wf_extendedBreadcrumb_placeholder,wf_extendedBreadcrumb_keywords,wf_extendedBreadcrumb_hidden,wf_extendedBreadcrumb_hideOnFirstLevel,wf_extendedBreadcrumb_onlytitle;{wf_extendedBreadcrumb_startpage},wf_extendedBreadcrumb_defineRoot;{protected_legend},protected;{expert_legend},align,space,cssID';
 
 // extend selector
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'wf_extendedBreadcrumb_defineRoot';

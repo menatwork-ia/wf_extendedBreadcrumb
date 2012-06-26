@@ -22,7 +22,8 @@ CREATE TABLE `tl_module` (
   `wf_extendedBreadcrumb_rootpage` varchar(64) NOT NULL default '',
   `wf_extendedBreadcrumb_defineRoot` char(1) NOT NULL default '',
   `wf_extendedBreadcrumb_keywords` text NULL,
-  `wf_extendedBreadcrumb_onlytitle` char(1) NOT NULL default ''
+  `wf_extendedBreadcrumb_onlytitle` char(1) NOT NULL default '',
+  `wf_extendedBreadcrumb_hideOnFirstLevel` char(1) NOT NULL default ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --

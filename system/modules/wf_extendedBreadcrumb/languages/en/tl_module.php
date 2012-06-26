@@ -38,6 +38,7 @@ $GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_defineRoot'] = array('Se
 $GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_placeholder'] = array('Placeholder', 'Here you can enter the placeholder for the maximum length of characters will be displayed.');
 $GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_keywords'] = array('Keywords', 'Here you can enter keywords separated by commas that occur then at the navigation path by using a CSS class to be highlighted.');
 $GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_onlytitle'] = array('Ignore title', 'Ignore optional page title and use the page name.');
+$GLOBALS['TL_LANG']['tl_module']['wf_extendedBreadcrumb_hideOnFirstLevel'] = array('Hide breadcrumb on first level','Hide breadcrumb if there is only one level.');
 
 /**
  * Legends
