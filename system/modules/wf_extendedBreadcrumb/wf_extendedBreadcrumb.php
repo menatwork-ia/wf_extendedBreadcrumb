@@ -437,9 +437,14 @@ class wf_extendedBreadcrumb extends Module
 
             $arrItems[0]['class'] .= " first";
             $arrItems[$intLength - 1]['class'] .= " last";
-        }
-
-        $this->Template->items = $arrItems;
+        };
+        
+        //HideOnFirstLevel
+		if (($this->wf_extendedBreadcrumb_hideOnFirstLevel == 1) && count($arrItems)<2)
+		{
+        	$arrItems = array();
+		}
+		$this->Template->items = $arrItems;
     }
 
 }
