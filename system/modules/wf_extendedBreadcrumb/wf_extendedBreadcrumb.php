@@ -100,6 +100,7 @@ class wf_extendedBreadcrumb extends Module
         $booArticle = strlen($this->Input->get('articles')) > 0;
         $booNews = strlen($this->Input->get('items')) > 0;
         $booEvents = strlen($this->Input->get('events')) > 0;
+        $booAutoItem = strlen($this->Input->get('auto_item')) > 0;
 
         //Load pages. This page plus all parents
         do
@@ -240,7 +241,7 @@ class wf_extendedBreadcrumb extends Module
         }
 
         //If an article, news or event is open, set the page as inactive
-        if ($booArticle || $booNews || $booEvents)
+        if ($booArticle || $booNews || $booEvents || $booAutoItem)
         {
             $arrItems[] = array
                 (
@@ -430,6 +431,34 @@ class wf_extendedBreadcrumb extends Module
             );
         }
 
+        //--------------------------------------------------------------------//
+        // auto item
+
+        if ($booAutoItem)
+        {
+
+            if (is_array($GLOBALS['TL_HOOKS']['getWfAutoItem']))
+            {
+                foreach ($GLOBALS['TL_HOOKS']['getWfAutoItem'] as $callback)
+                {
+                    $this->import($callback[0]);
+                    $arrItems = $this->$callback[0]->$callback[1]($arrItems, $this);
+                }
+            }
+        }
+
+        //--------------------------------------------------------------------//
+        // last edit
+
+        if (is_array($GLOBALS['TL_HOOKS']['manipulatedWfItem']))
+        {
+            foreach ($GLOBALS['TL_HOOKS']['manipulatedWfItem'] as $callback)
+            {
+                $this->import($callback[0]);
+                $arrItems = $this->$callback[0]->$callback[1]($arrItems, $this);
+            }
+        }
+
         //Set first an Last
         if (count($arrItems))
         {
@@ -438,13 +467,13 @@ class wf_extendedBreadcrumb extends Module
             $arrItems[0]['class'] .= " first";
             $arrItems[$intLength - 1]['class'] .= " last";
         };
-        
+
         //HideOnFirstLevel
-		if (($this->wf_extendedBreadcrumb_hideOnFirstLevel == 1) && count($arrItems)<2)
-		{
-        	$arrItems = array();
-		}
-		$this->Template->items = $arrItems;
+        if (($this->wf_extendedBreadcrumb_hideOnFirstLevel == 1) && count($arrItems)<2)
+        {
+            $arrItems = array();
+        }
+        $this->Template->items = $arrItems;
     }
 
 }
