@@ -39,7 +39,7 @@
 	"extra":{
 		"contao":{
 			"sources":{
-				"system/modules/syncCtoUpdater":"system/modules/syncCtoUpdater"
+				"system/modules/wf_extendedBreadcrumb":"system/modules/wf_extendedBreadcrumb"
 			}
 		}
 	}
