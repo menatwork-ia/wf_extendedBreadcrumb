@@ -9,7 +9,7 @@
 <?php if ($item['isActive']): ?>
 <li class="active<?php if ($item['class']): ?> <?php echo $item['class']; ?><?php endif; ?>"><span title="<?php echo $item['longtitle'] ?>"><?php echo $item['title']; ?></span></li>
 <?php else: ?>
-<li<?php if ($item['class']): ?> class="<?php echo $item['class']; ?>"<?php endif; ?>><a title="<?php echo $item['longtitle'] ?>" href="<?php echo $item['href']; ?>" onclick="this.blur();<?php echo $item['href']; ?>"><?php echo $item['title']; ?></a></li>
+<li<?php if ($item['class']): ?> class="<?php echo $item['class']; ?>"<?php endif; ?>><a title="<?php echo $item['longtitle'] ?>" href="<?php echo $item['href']; ?>"><?php echo $item['title']; ?></a></li>
 <li class="delimiter"><?php echo $this->delimiter; ?></li>
 <?php endif; ?>
 <?php endforeach; ?>
