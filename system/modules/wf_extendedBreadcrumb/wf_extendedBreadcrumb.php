@@ -465,6 +465,13 @@ class wf_extendedBreadcrumb extends Module
 
             $arrItems[0]['class'] .= " first";
             $arrItems[$intLength - 1]['class'] .= " last";
+
+            // If the last one is not active, we have an unknown item e.g. auto_item
+            // So just set the element as active.
+            if($arrItems[$intLength - 1]['isActive'] == false)
+            {
+                $arrItems[$intLength - 1]['isActive'] = true;
+            }
         };
 
         //HideOnFirstLevel
