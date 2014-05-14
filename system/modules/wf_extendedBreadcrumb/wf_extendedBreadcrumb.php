@@ -436,7 +436,6 @@ class wf_extendedBreadcrumb extends Module
 
         if ($booAutoItem)
         {
-
             if (is_array($GLOBALS['TL_HOOKS']['getWfAutoItem']))
             {
                 foreach ($GLOBALS['TL_HOOKS']['getWfAutoItem'] as $callback)
@@ -469,10 +468,11 @@ class wf_extendedBreadcrumb extends Module
         };
 
         //HideOnFirstLevel
-        if (($this->wf_extendedBreadcrumb_hideOnFirstLevel == 1) && count($arrItems)<2)
+        if (($this->wf_extendedBreadcrumb_hideOnFirstLevel == 1) && count($arrItems) < 2)
         {
             $arrItems = array();
         }
+
         $this->Template->items = $arrItems;
     }
 
