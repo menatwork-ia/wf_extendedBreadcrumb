@@ -441,7 +441,7 @@ class wf_extendedBreadcrumb extends Module
                 foreach ($GLOBALS['TL_HOOKS']['getWfAutoItem'] as $callback)
                 {
                     $this->import($callback[0]);
-                    $arrItems = $this->$callback[0]->$callback[1]($arrItems, $this);
+                    $arrItems = $this->{$callback[0]}->{$callback[1]}($arrItems, $this);
                 }
             }
         }
@@ -454,7 +454,7 @@ class wf_extendedBreadcrumb extends Module
             foreach ($GLOBALS['TL_HOOKS']['manipulatedWfItem'] as $callback)
             {
                 $this->import($callback[0]);
-                $arrItems = $this->$callback[0]->$callback[1]($arrItems, $this);
+                $arrItems = $this->{$callback[0]}->{$callback[1]}($arrItems, $this);
             }
         }
 
