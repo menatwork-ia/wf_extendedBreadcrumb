@@ -189,6 +189,7 @@ class wf_extendedBreadcrumb extends Module
 
             $arrItems[] = array
                 (
+                'id' => $arrPages[$i]['id'],
                 'isActive' => false,
                 'href' => $this->generateFrontendUrl($arrPages[$i]),
                 'title' => $strTitle,
@@ -245,6 +246,7 @@ class wf_extendedBreadcrumb extends Module
         {
             $arrItems[] = array
                 (
+                'id' => $arrPages[$i]['id'],
                 'isActive' => FALSE,
                 'href' => $this->generateFrontendUrl($arrPages[$i]),
                 'title' => $strTitle,
@@ -256,6 +258,7 @@ class wf_extendedBreadcrumb extends Module
         {
             $arrItems[] = array
                 (
+                'id' => $arrPages[$i]['id'],
                 'isActive' => TRUE,
                 'href' => $this->generateFrontendUrl($arrPages[$i]),
                 'title' => $strTitle,
@@ -294,6 +297,7 @@ class wf_extendedBreadcrumb extends Module
 
             $arrItems[] = array
                 (
+                'id' => $arrPages[$i]['id'],
                 'isActive' => TRUE,
                 'href' => $this->generateFrontendUrl($objArticle->row()),
                 'title' => $strTitle,
@@ -358,6 +362,7 @@ class wf_extendedBreadcrumb extends Module
 
             $arrItems[] = array
                 (
+                'id' => $arrPages[$i]['id'],
                 'isActive' => TRUE,
                 'href' => $this->generateFrontendUrl($objItems->row()),
                 'title' => $strTitle,
@@ -423,6 +428,7 @@ class wf_extendedBreadcrumb extends Module
 
             $arrItems[] = array
                 (
+                'id' => $arrPages[$i]['id'],
                 'isActive' => TRUE,
                 'href' => $this->generateFrontendUrl($objEvent->row()),
                 'title' => $strTitle,
